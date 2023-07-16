@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    ":label(renovate)",
+    ":timezone(Europe/Berlin)",
+    ":automergeDigest"
+  ],
+  "enabledManagers": ["dockerfile", "regex"],
+  "regexManagers": [
+    {
+      "fileMatch": ["^Containerfile$"],
+      "matchStrings": ["ARG VERSION=\"(?<currentDigest>.*?)\"\\s"],
+      "currentValueTemplate": "main",
+      "datasourceTemplate": "git-refs",
+      "depNameTemplate": "eclipse-chariott/chariott",
+      "packageNameTemplate": "https://github.com/eclipse-chariott/chariott/"
+    }
+  ]
+}

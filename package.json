@@ -1,0 +1,8 @@
+{
+  "name": "renovate-semver-test",
+  "version": "0.0.1",
+  "dependencies": {
+    "@types/semver": "^7.4.0",
+    "semver": "^7.4.0"
+  }
+}
