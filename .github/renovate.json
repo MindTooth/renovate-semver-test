@@ -3,18 +3,7 @@
   "extends": [
     "config:best-practices",
     ":label(renovate)",
-    ":timezone(Europe/Berlin)",
-    ":automergeDigest"
+    ":timezone(Europe/Berlin)"
   ],
-  "enabledManagers": ["dockerfile", "regex"],
-  "regexManagers": [
-    {
-      "fileMatch": ["^Containerfile$"],
-      "matchStrings": ["ARG VERSION=\"(?<currentDigest>.*?)\"\\s"],
-      "currentValueTemplate": "main",
-      "datasourceTemplate": "git-refs",
-      "depNameTemplate": "eclipse-chariott/chariott",
-      "packageNameTemplate": "https://github.com/eclipse-chariott/chariott/"
-    }
-  ]
+  "enabledManagers": ["npm"]
 }
